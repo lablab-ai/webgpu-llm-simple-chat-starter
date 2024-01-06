@@ -1,127 +1,114 @@
- .chatui {
-   display: flex;
-   flex-flow: column wrap;
-   justify-content: space-between;
-   width: 100%;
-   max-width: 867px;
-   margin: 25px 10px;
-   height: 600px;
-   border: 2px solid #ddd;
-   border-radius: 5px;
-   box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
- }
-
- s .chatui-header {
-   display: flex;
-   justify-content: space-between;
-   padding: 10px;
-   border-bottom: 2px solid #ddd;
-   background: #eee;
-   color: #666;
- }
-
- .chatui-chat {
-   flex: 1;
-   overflow-y: auto;
-   padding: 10px;
- }
-
- .chatui-chat::-webkit-scrollbar {
-   width: 6px;
- }
-
- .chatui-chat::-webkit-scrollbar-track {
-   background: #ddd;
- }
-
- .chatui-chat::-webkit-scrollbar-thumb {
-   background: #bdbdbd;
- }
-
- .msg {
-   display: flex;
-   align-items: flex-end;
-   margin-bottom: 10px;
- }
-
- .msg:last-of-type {
-   margin: 0;
- }
-
- .msg-bubble {
-   max-width: 450px;
-   padding: 15px;
-   border-radius: 15px;
-   background: #ececec;
- }
-
- .left-msg .msg-bubble {
-   border-bottom-left-radius: 0;
- }
-
- .error-msg .msg-bubble {
-  border-bottom-left-radius: 0;
-  color: #f15959;
+.chatui {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 867px;
+  margin: 25px auto; /* Auto margin to center the entire .chatui horizontally */
+  height: 600px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+  background-color: #333;
+  color: #fff;
 }
 
+.chatui-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 2px solid #555; /* Updated border color for dark mode */
+  background: #444; /* Updated background color for dark mode */
+  color: #fff; /* Updated text color for dark mode */
+}
+
+.chatui-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #111; /* Updated background color for dark mode */
+}
+
+.chatui-chat::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatui-chat::-webkit-scrollbar-track {
+  background: #333; /* Updated background color for dark mode */
+}
+
+.chatui-chat::-webkit-scrollbar-thumb {
+  background: #555; /* Updated scrollbar thumb color for dark mode */
+}
+
+.msg-bubble {
+  background: #555; /* Updated message bubble background color for dark mode */
+  color: #fff; /* Updated text color for dark mode */
+}
+
+.right-msg .msg-bubble {
+  background: #2a85ed; /* Updated background color for right-aligned messages in dark mode */
+  color: #fff; /* Updated text color for dark mode */
+}
+
+.left-msg .msg-bubble,
+.error-msg .msg-bubble,
 .init-msg .msg-bubble {
   border-bottom-left-radius: 0;
 }
 
- .right-msg {
-   flex-direction: row-reverse;
- }
-
- .right-msg .msg-bubble {
-   background: #579ffb;
-   color: #fff;
-   border-bottom-right-radius: 0;
- }
-
- .chatui-inputarea {
-   display: flex;
-   padding: 10px;
-   border-top: 2px solid #ddd;
-   background: #eee;
- }
-
- .chatui-inputarea * {
-   padding: 10px;
-   border: none;
-   border-radius: 3px;
-   font-size: 1em;
- }
-
- .chatui-input {
-   flex: 1;
-   background: #ddd;
- }
-
- .chatui-reset-btn {
-   margin-left: 10px;
-   background: #ececec;
-   font-weight: bold;
-   border-radius: 8px;
-   width: 200px;
-   cursor: pointer;
- }
-
- .chatui-reset-btn:hover {
-  background: #dcdada;
+.chatui-inputarea {
+  display: flex;
+  padding: 10px;
+  border-top: 2px solid #555; /* Updated border color for dark mode */
+  background: #444; /* Updated background color for dark mode */
 }
 
- .chatui-send-btn {
+.chatui-inputarea * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  color: #fff; /* Updated text color for dark mode */
+}
+
+.chatui-input {
+  flex: 1;
+  background: #333; /* Updated background color for dark mode */
+}
+
+.chatui-reset-btn {
+  margin-right: 100 px;
+  background: #2a85ed; /* Set the background to transparent */
+  font-weight: bold;
+  border-radius: 15px;
+  width: 200px;
+  cursor: pointer;
+  color: #ffffff; /* Set the text color to white */
+  border: 2px solid #8538cd; /* Set a border to maintain visibility */
+}
+
+.chatui-reset-btn:hover {
+  background: #1f89d5; /* Updated hover color for dark mode */
+}
+
+
+.chatui-send-btn {
   margin-left: 10px;
-  background: #579ffb;
+  background: #2a85ed; /* Updated background color for dark mode */
   color: #fff;
   font-weight: bold;
   cursor: pointer;
 }
 
 .chatui-send-btn:hover {
-  background: #577bfb;
+  background: #1d6fa5; /* Updated hover color for dark mode */
 }
 
- .chatui-chat {
-   background-color: #fcfcfe;
- }
+.chatui-extra-control {
+  background: #444; /* Updated background color for dark mode */
+}
+
+.chatui-info-label {
+  color: #fff; /* Updated text color for dark mode */
+}
