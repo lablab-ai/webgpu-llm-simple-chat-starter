@@ -1,4 +1,4 @@
-export default {
+xport default {
 	"model_list": [
 		{
 			"model_url": "https://huggingface.co/mlc-ai/mlc-chat-Llama-2-7b-chat-hf-q4f32_1/resolve/main/",
